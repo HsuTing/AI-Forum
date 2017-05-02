@@ -1,0 +1,29 @@
+{
+  "generator-cat": {
+    "promptValues": {
+      "authorName": "hsuting",
+      "authorEmail": "hsuting0106@gmail.com",
+      "authorUrl": "http://hsuting.com",
+      "type": [
+        "website",
+        "docs"
+      ],
+      "subject": "AI Forum",
+      "url": "",
+      "other": []
+    },
+    "plugins": [
+      "react",
+      "websiteNoServer",
+      "docs"
+    ],
+    "subject": "AI Forum",
+    "url": "",
+    "extension": "AI-Forum/",
+    "alias": {
+      "public": "public",
+      "components": "components",
+      "componentsShare": "components/share"
+    }
+  }
+}
