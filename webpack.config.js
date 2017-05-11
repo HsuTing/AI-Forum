@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     index: path.resolve(src, './index.js'),
     common: [
+      'react-router',
       'radium',
       'radium-normalize',
       'prop-types',

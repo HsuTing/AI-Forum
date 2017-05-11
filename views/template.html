@@ -53,12 +53,12 @@
     {% block body %}{% endblock %}
   </body>
   {% block script %}{% endblock %}
-  {% if data %}
   <script>
-    var data = {{ data | safe }}
+    var basename = '{{ basename }}';
   </script>
-  {% endif %}
 
+  <script defer src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+  <link defer href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
   {% if ENV %}
   <script defer src="/AI-Forum/public/js/common.min.js" type="text/javascript"></script>
   <script defer src="/AI-Forum/public/js/{{ js }}.min.js" type="text/javascript"></script>

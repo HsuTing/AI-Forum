@@ -9,6 +9,10 @@ const a = {
   textDecoration: 'initial'
 };
 
+const all = {
+  color: '#424242'
+};
+
 @radium
 export default class Normalize extends React.Component {
   render() {
@@ -17,6 +21,9 @@ export default class Normalize extends React.Component {
         <StyleRadium rules={normalize} />
         <StyleRadium scopeSelector='a'
                      rules={a}
+        />
+        <StyleRadium scopeSelector='*'
+                     rules={all}
         />
       </style>
     );

@@ -58,12 +58,17 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "cat-components": "^1.2.2",
+    "cat-components": "^1.2.3",
+    "cat-utils": "^0.4.1",
+    "eases": "^1.0.8",
     "nunjucks": "^3.0.0",
     "prop-types": "^15.5.8",
     "radium": "^0.18.2",
     "radium-normalize": "^2.0.5",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-icons": "^2.2.5",
+    "react-router-dom": "^4.1.1",
+    "uuid": "^3.0.1"
   }
 }

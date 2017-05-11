@@ -12,8 +12,11 @@
       "alias": {
         "public": "public",
         "components": "components",
+        "componentsStyle": "components/style",
         "componentsShare": "components/share",
-        "utils": "utils"
+        "componentsShareIcon": "components/share/icon",
+        "componentsShareStyle": "components/share/style",
+        "componentsHome": "components/home"
       }
     }]
   ]
