@@ -16,7 +16,8 @@
         "componentsShare": "components/share",
         "componentsShareIcon": "components/share/icon",
         "componentsShareStyle": "components/share/style",
-        "componentsHome": "components/home"
+        "componentsHome": "components/home",
+        "componentsSchedue": "components/schedue"
       }
     }]
   ]

@@ -9,6 +9,7 @@ import Normalize from 'componentsShare/Normalize';
 
 import Header from './Header';
 import Home from './Home';
+import Schedue from './Schedue';
 import Footer from './Footer';
 
 @radium
@@ -33,8 +34,12 @@ export default class Index extends React.Component {
                  exact
           />
 
-          <Route path='/topics/'
-                 component={() => <div>topics</div>}
+          <Route path='/schedue/*'
+                 component={() => <Schedue {...props}
+                                           isServer={isServer}
+                                           Router={Router}
+                                  />
+                           }
                  exact
           />
 

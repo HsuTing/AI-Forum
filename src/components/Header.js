@@ -21,6 +21,9 @@ export default class Header extends React.Component {
         {[...pages].reverse().map((button, buttonIndex) => {
           const {title, link} = button;
 
+          if(button.hide)
+            return null;
+
           return (
             <Link key={buttonIndex}
                   to={link}

@@ -57,7 +57,7 @@ export default class Home extends React.Component {
               本活動以論壇的方式，提供國內大學、研究單位及產業界的專家與學者一個對話與吸收新知的平台。 本屆人工智慧論壇邀請到國際知名傑出學者包括法國國家資訊研究院研究員Tristan CazeNave，與新加坡南洋科技大學教授Gao Cong。會議中並舉辦兩個主題討論會，主題包括智慧物聯網與機器學習，希望AI Forum 2016能有助拓展參與研究者更廣更深的視野，也增進台灣人工智慧領域研究能量與國際能見度。並且讓東部的學生有更多機會接觸最新的人工智慧研討會活動。
             </p>
 
-            <Link to='/topics/'>
+            <Link to='/schedue/'>
               <Button style={style.topic_button}
               >了解更多</Button>
             </Link>

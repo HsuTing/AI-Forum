@@ -1,12 +1,12 @@
 'use strict';
 
-/*
+const hide = true;
+
 export default [{
-  title: '會議主題',
-  link: '/topics/'
-}, {
   title: '會議議程',
   link: '/schedue/'
+}, {
+  title: '會議議程',
+  link: '/schedue/second/',
+  hide
 }];
-*/
-export default [];
