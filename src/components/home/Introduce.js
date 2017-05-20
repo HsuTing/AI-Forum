@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import radium from 'radium';
+import {StyleRoot} from 'radium';
 import Button from 'cat-components/lib/Button';
 import GoTo from 'cat-components/lib/GoTo';
 
@@ -10,13 +10,12 @@ import {layout} from 'componentsShareStyle/style';
 
 import style from './style/introduce';
 
-@radium
 export default class Introduce extends React.Component {
   render() {
     return (
-      <div style={style.root}>
+      <StyleRoot style={style.root}>
         <div style={[style.container, layout.grid]}>
-          <div style={layout.col(7)}>
+          <div style={[layout.col(6), layout.tablet_col(8)]}>
             <Icon style={style.icon} />
 
             <h3 style={style.title}>簡單敘述(約20字)</h3>
@@ -25,7 +24,7 @@ export default class Introduce extends React.Component {
             <p style={style.location}>國立成功大學</p>
           </div>
 
-          <div style={layout.col(5)}>
+          <div style={[layout.col(6), layout.tablet_col(8)]}>
             <div style={style.block}>
               <h1 style={style.block_title}>AI Forum 2017</h1>
 
@@ -43,7 +42,7 @@ export default class Introduce extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </StyleRoot>
     );
   }
 }

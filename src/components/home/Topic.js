@@ -20,7 +20,7 @@ export default class Topic extends React.Component {
     const {icon, title, body} = this.props;
 
     return (
-      <div style={layout.col(4)}>
+      <div style={[layout.col(4), layout.tablet_col(8)]}>
         <div style={style.root}>
           <div style={style.header}>
             {React.cloneElement(icon, {

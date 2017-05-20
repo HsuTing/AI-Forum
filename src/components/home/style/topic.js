@@ -1,9 +1,15 @@
 'use strict';
 
+import {tabletMedia} from 'componentsShareStyle/style';
+
 export default {
   root: {
     width: '100%',
-    maxWidth: '280px'
+    maxWidth: '280px',
+    ...tabletMedia({
+      maxWidth: 'initial',
+      margin: '0px 0px 20px'
+    })
   },
 
   header: {

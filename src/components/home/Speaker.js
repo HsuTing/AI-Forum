@@ -22,7 +22,7 @@ export default class Speaker extends React.Component {
     const {img, title, content, website} = this.props;
 
     return (
-      <div style={layout.col(6)}>
+      <div style={[layout.col(6), layout.tablet_col(8), style.root]}>
         <div style={layout.grid}>
           <div style={style.img(img)} />
 

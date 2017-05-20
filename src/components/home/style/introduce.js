@@ -1,13 +1,17 @@
 'use strict';
 
-import {color} from 'componentsShareStyle/style';
+import {color, tabletMedia} from 'componentsShareStyle/style';
 
 export default {
   root: {
     width: 'calc(100vw - 150px * 2)',
     maxWidth: '1800px',
     padding: '120px 150px',
-    margin: '0 auto'
+    margin: '0 auto',
+    ...tabletMedia({
+      width: 'calc(100vw - 30px * 2)',
+      padding: '30px 30px 0px'
+    })
   },
 
   container: {
@@ -43,7 +47,17 @@ export default {
   block: {
     padding: '40px',
     maxWidth: '400px',
-    boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.14)'
+    boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.14)',
+    ...tabletMedia({
+      position: 'relative',
+      left: '-30px',
+      margin: '50px 0px 0px',
+      padding: '30px',
+      width: 'calc(100vw - 30px * 2)',
+      maxWidth: 'initial',
+      background: color.grey_200,
+      boxShadow: '0 0px 0px 0'
+    })
   },
 
   block_title: {
@@ -60,6 +74,9 @@ export default {
     margin: '0px',
     padding: '10px 25px',
     color: color.white,
-    background: color.blue
+    background: color.blue,
+    ...tabletMedia({
+      display: 'none'
+    })
   }
 };

@@ -1,11 +1,11 @@
 'use strict';
 
 import React from 'react';
-import radium from 'radium';
+import {StyleRoot} from 'radium';
 import Link from 'cat-components/lib/Link';
 import Button from 'cat-components/lib/Button';
 
-import Img from 'componentsShare/Img';
+import Img, {ImgContent} from 'componentsHome/Img';
 import Introduce from 'componentsHome/Introduce';
 import Topic from 'componentsHome/Topic';
 import Speaker from 'componentsHome/Speaker';
@@ -13,25 +13,24 @@ import Map from 'componentsHome/Map';
 import Organizer from 'componentsHome/Organizer';
 import style from 'componentsStyle/home';
 import {layout, content} from 'componentsShareStyle/style';
-import imgStyle from 'componentsShareStyle/img';
+import imgStyle from 'componentsHome/style/img';
 import topics from 'componentsHome/topics';
 import speakers from 'componentsHome/speakers';
 import organizers from 'componentsHome/organizers';
 
-@radium
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
+      <StyleRoot>
         <Introduce />
 
         <Img src=''>
-          <div id='introduce-1'>
+          <ImgContent id='introduce-1'>
             <h1 style={imgStyle.title}>AI Forum 2017</h1>
             <p style={imgStyle.body}>
               主題將包括人工智慧在掀起第三次工業革命的物聯網上所扮演的角色、和目前最熱門的機器學習與資料探勘議題、以及以及幫助Google AlphaGo擊敗棋王的蒙地卡羅樹搜尋與深度學習的應用。將有來自國內外十餘位人工智慧專家學者進行專題演講，同時也邀請到專家學者與Intel、趨勢科技等知名廠商參與AlphaGo與物聯網兩場論壇，機會難得，精彩可期！
             </p>
-          </div>
+          </ImgContent>
         </Img>
 
         <div style={content.root}>
@@ -49,7 +48,7 @@ export default class Home extends React.Component {
         </div>
 
         <Img src=''>
-          <div style={style.topic}>
+          <ImgContent style={style.topic}>
             <h1 style={[imgStyle.title, style.topic_color]}
             >會議主題</h1>
 
@@ -61,7 +60,7 @@ export default class Home extends React.Component {
               <Button style={style.topic_button}
               >了解更多</Button>
             </Link>
-          </div>
+          </ImgContent>
         </Img>
 
         <div style={content.root}>
@@ -79,7 +78,7 @@ export default class Home extends React.Component {
         </div>
 
         <Img background={<Map />}>
-          <div style={style.map}>
+          <ImgContent style={style.map}>
             <h1 style={imgStyle.title}>相關資訊</h1>
 
             <p style={imgStyle.body}>
@@ -91,7 +90,7 @@ export default class Home extends React.Component {
               <br />
               聯絡人：莊坤達
             </p>
-          </div>
+          </ImgContent>
         </Img>
 
         <div style={content.root}>
@@ -107,7 +106,7 @@ export default class Home extends React.Component {
             })}
           </div>
         </div>
-      </div>
+      </StyleRoot>
     );
   }
 }

@@ -1,8 +1,14 @@
 'use strict';
 
-import {color} from 'componentsShareStyle/style';
+import {color, tabletMedia} from 'componentsShareStyle/style';
 
 export default {
+  root: {
+    ...tabletMedia({
+      margin: '0px 0px 40px'
+    })
+  },
+
   img: link => ({
     width: '150px',
     height: '150px',
@@ -10,23 +16,36 @@ export default {
     background: `url(${link}) center / cover`,
     border: color.black,
     borderRadius: '50%',
-    boxShadow: 'rgba(0, 0, 0, 0.4) 2px 2px 5px'
+    boxShadow: 'rgba(0, 0, 0, 0.4) 2px 2px 5px',
+    ...tabletMedia({
+      width: '100px',
+      height: '100px'
+    })
   }),
 
   introduce: {
-    width: 'calc(100% - 200px)'
+    width: 'calc(100% - 200px)',
+    ...tabletMedia({
+      width: 'calc(100% - 150px)'
+    })
   },
 
   title: {
     fontSize: '18px',
     lineHeight: '24px',
-    margin: '0px 0px 20px'
+    margin: '0px 0px 20px',
+    ...tabletMedia({
+      margin: '0px 0px 10px'
+    })
   },
 
   content: {
     fontSize: '15px',
     lineHeight: '28px',
-    minHeight: '60px'
+    minHeight: '60px',
+    ...tabletMedia({
+      minHeight: '30px'
+    })
   },
 
   button: {

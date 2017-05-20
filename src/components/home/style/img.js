@@ -1,18 +1,25 @@
 'use strict';
 
-import {color} from './style';
+import {color, tabletMedia} from 'componentsShareStyle/style';
 
 export default {
   root: {
     position: 'relative',
     width: '100vw',
-    height: '80vh'
+    height: '80vh',
+    ...tabletMedia({
+      position: 'initial',
+      height: 'initial'
+    })
   },
 
   img: link => ({
     width: '100%',
     height: '100%',
-    background: link ? `url(${link}) center / cover` : color.indigo
+    background: link ? `url(${link}) center / cover` : color.indigo,
+    ...tabletMedia({
+      height: '80vh'
+    })
   }),
 
   content: {
@@ -22,7 +29,11 @@ export default {
     minWidth: '280px',
     padding: '40px',
     background: color.blue,
-    color: color.white
+    color: color.white,
+    ...tabletMedia({
+      position: 'initial',
+      padding: '30px'
+    })
   },
 
   title: {
@@ -36,6 +47,9 @@ export default {
     maxWidth: '280px',
     fontSize: '15px',
     lineHeight: '28px',
-    color: color.white
+    color: color.white,
+    ...tabletMedia({
+      maxWidth: 'initial'
+    })
   }
 };
